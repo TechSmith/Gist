@@ -67,7 +67,7 @@ void Yin<T>::setMaxFrequency (T maxFreq)
 template <class T>
 T Yin<T>::pitchYin (const std::vector<T>& frame)
 {
-    unsigned long period;
+    unsigned long period = 0UL;
     T fPeriod;
     
     // steps 1, 2 and 3 of the Yin algorithm
@@ -151,7 +151,7 @@ template <class T>
 unsigned long Yin<T>::getPeriodCandidate (const std::vector<T>& delta)
 {
     unsigned long minPeriod = 30;
-    unsigned long period;
+    unsigned long period = 0UL;
     
     T thresh = 0.1;
     
